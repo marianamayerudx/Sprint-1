@@ -1,73 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Pink Pixel Dreams</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Pixel Dreams</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="flower" style="left:10%">🌸</div>
-<div class="flower" style="left:30%">🌸</div>
-<div class="flower" style="left:50%">🌸</div>
-<div class="flower" style="left:70%">🌸</div>
-<div class="flower" style="left:90%">🌸</div>
+  <!-- flores -->
+  <div class="flower" style="left:8%;  animation-duration:9s;  animation-delay:0s">🌸</div>
+  <div class="flower" style="left:22%; animation-duration:12s; animation-delay:2s">🌸</div>
+  <div class="flower" style="left:40%; animation-duration:10s; animation-delay:5s">🌸</div>
+  <div class="flower" style="left:60%; animation-duration:14s; animation-delay:1s">🌸</div>
+  <div class="flower" style="left:75%; animation-duration:11s; animation-delay:3s">🌸</div>
+  <div class="flower" style="left:90%; animation-duration:8s;  animation-delay:7s">🌸</div>
 
+  <!-- nav -->
+  <nav>
+   <a class="nav-logo" href="index.html">
+  <img src="c:\Users\mioma\Downloads\luna vitória.png" style="height:90px; vertical-align:middle">
+</a>
 
-    <header>
-        <h1>🌸 Pink Pixel Dreams 🌸</h1>
+<div style="position:absolute; left:50%; transform:translateX(-50%); text-align:center">
+  <img src="c:\Users\mioma\Downloads\logojogo.png" style="height:80px; display:block; margin:auto">
+  <p style="color:white; font-size:20px; margin:10px;">Explore e colete itens em um pequeno mundo mágico de pixels!</p>
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html"    class="active">Home</a></li>
+      <li><a href="gameplay.html"          >Gameplay</a></li>
+      <li><a href="sobre.html"             >Sobre</a></li>
+      <li><a href="feedback.html"          >Feedback</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-        <p class="subtitle">
-            Explore pequenos sonhos em um mundo mágico de pixels
-        </p>
-    </header>
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="active">🏠 Home</a>
+    <a href="gameplay.html"          > Gameplay</a>
+    <a href="sobre.html"             > Sobre</a>
+    <a href="feedback.html"          > Feedback</a>
+  </div>
 
+  <div class="container">
 
-    <div class="container">
-
-        <div class="box">
-
-            <div class="image-space">
-                Espaço para imagem do jogo
-            </div>
-
-            <button class="play">PLAY</button>
-
-        </div>
-
-
-        <div class="box controls-box">
-
-            <div class="controls-text">
-
-                <h2>Controles</h2>
-
-                <p>Teclas W A S D ou Setas → mover</p>
-                <p>Tecla E → interagir</p>
-
-            </div>
-
-            <div class="controls-image">
-                Espaço para imagem
-            </div>
-
-        </div>
-
-
-        <div class="box">
-
-            <h2>Como Jogar</h2>
-
-            <p>
-                Explore o mundo, descubra segredos e colete fragmentos de sonhos.
-            </p>
-
-        </div>
-
+    <div class="box" style="text-align:center">
+      <img src="c:\Users\mioma\Downloads\ilustraçaojogo.png" style="width:100%; border-radius:16px">
+      <button class="play" onclick="window.location.href='gameplay.html'">▶ PLAY</button>
+      <p style="text-align:center; margin-top:16px; color:#aaa; font-size:13px">
+        Clique para ver como jogar!
+      </p>
     </div>
 
-</body>
+    <div class="box">
+      <h2> Bem-vinda ao Pink Pixel Dreams!</h2>
+      <p>
+        Um jogo de exploração e mágico onde cada pixel guarda um segredo.
+        Caminhe por um mundo colorido, busque fragmentos de sonhos e encare desafios ao coletar seus itens.
+      </p>
+      <p>
+        Feito com muito carinho para quem ama aventuras tranquilas, estética fofa e aquela sensação quentinha de estar dentro de um sonho.
+      </p>
+      <div style="margin-top:16px">
+        <span class="tag"> Exploração</span>
+        <span class="tag"> Pixel Art</span>
+        <span class="tag"> Single-player</span>
+      </div>
+    </div>
 
+    <div class="box" style="text-align:center">
+      <h2 style="text-align:center"> O que te espera em Pixel Play Dreams?</h2>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:14px; margin-top:16px">
+        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
+          <div style="font-size:32px"></div>
+          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Um mundo colorido, secreto e imaginário</p>
+        </div>
+        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
+          <div style="font-size:32px"></div>
+          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Itens colecionáveis</p>
+        </div>
+        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
+          <div style="font-size:32px"></div>
+          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Personagens fofos</p>
+        </div>
+        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
+          <div style="font-size:32px"></div>
+          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Trilha sonora dreamy</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+     Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx <3
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
 </html>
