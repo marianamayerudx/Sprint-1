@@ -11,7 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-
 .flower {
   position: fixed; top: -60px;
   font-size: 22px;
@@ -30,20 +29,55 @@ nav {
   position: sticky; top: 0; z-index: 100;
   background: #ff7ac8;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 32px;
-  height:130px;
+  padding: 0 24px;
+  min-height: 90px;
   box-shadow: 0 4px 12px rgba(255,100,180,0.3);
+  flex-wrap: nowrap;
+  gap: 8px;
 }
 
 .nav-logo {
   font-size: 20px; font-weight: 700;
   color: white; text-decoration: none;
   letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  height: 70px;
+  vertical-align: middle;
+}
+
+/* título central da nav */
+.nav-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  max-width: 50%;
+}
+
+.nav-title p {
+  margin: 0;
+  color: white;
+  line-height: 1.3;
+}
+
+.nav-title .nav-title-main {
+  font-size: clamp(18px, 3.5vw, 36px);
+  font-weight: 700;
+}
+
+.nav-title .nav-title-sub {
+  font-size: clamp(12px, 1.8vw, 18px);
+  margin-top: 4px !important;
 }
 
 .nav-links {
   display: flex; gap: 6px; align-items: center;
   list-style: none; margin: 0; padding: 0;
+  flex-shrink: 0;
 }
 
 .nav-links a {
@@ -63,6 +97,7 @@ nav {
   flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer;
   padding: 6px;
+  flex-shrink: 0;
 }
 .hamburger span {
   display: block; width: 24px; height: 2.5px;
@@ -73,10 +108,10 @@ nav {
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-/* mobile menu */
+/* mobile menu — agora usa top dinâmico via JS ou top fixo correto */
 .mobile-menu {
   display: none;
-  position: fixed; top: 60px; left: 0; right: 0;
+  position: fixed; top: 90px; left: 0; right: 0;
   background: #ff7ac8;
   flex-direction: column; gap: 4px;
   padding: 12px 20px 18px;
@@ -97,6 +132,7 @@ nav {
 @media (max-width: 680px) {
   .nav-links  { display: none; }
   .hamburger  { display: flex; }
+  .nav-title  { display: none; } /* oculta título na nav em mobile — aparece no container */
 }
 
 /* ── HEADER ── */
@@ -109,9 +145,28 @@ header {
 header h1   { font-size: clamp(28px, 6vw, 52px); margin: 0; font-weight: 700; }
 .subtitle   { font-size: 17px; margin-top: 10px; opacity: 0.95; }
 
+/* ── TÍTULO MOBILE (exibido abaixo da nav em telas pequenas) ── */
+.page-title-mobile {
+  display: none;
+  background: #ff7ac8;
+  color: white;
+  text-align: center;
+  padding: 16px 20px 14px;
+}
+.page-title-mobile p {
+  margin: 0;
+  color: white;
+}
+.page-title-mobile .ptm-main { font-size: 26px; font-weight: 700; }
+.page-title-mobile .ptm-sub  { font-size: 14px; margin-top: 4px !important; opacity: 0.9; }
+
+@media (max-width: 680px) {
+  .page-title-mobile { display: block; }
+}
+
 /* ── CONTAINER ── */
 .container {
-  width: min(72%, 860px);
+  width: min(90%, 860px);
   margin: auto;
   margin-top: 40px;
   padding-bottom: 60px;
@@ -138,12 +193,14 @@ p       { color: #555; line-height: 1.7; }
 /* ── BOTÃO PLAY ── */
 .play {
   background: #ff4fb3; color: white;
-  border: none; padding: 22px 50px;
-  font-size: 26px; font-family: 'Quicksand', sans-serif;
+  border: none; padding: 18px 40px;
+  font-size: clamp(18px, 4vw, 26px);
+  font-family: 'Quicksand', sans-serif;
   font-weight: 700; border-radius: 20px; cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 6px #c92c8e;
-  display: block; margin: 0 auto;
+  display: block; margin: 16px auto 0;
+  width: fit-content;
 }
 .play:hover  { transform: translateY(-3px); box-shadow: 0 9px #c92c8e; }
 .play:active { transform: translateY(2px);  box-shadow: 0 3px #c92c8e; }
@@ -158,14 +215,23 @@ p       { color: #555; line-height: 1.7; }
 }
 
 /* ── CONTROLES ── */
-.controls-box   { display: flex; align-items: center; gap: 20px; }
-.controls-text  { flex: 1; }
+.controls-box   { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.controls-text  { flex: 1; min-width: 200px; }
 .controls-image {
   width: 160px; height: 120px; flex-shrink: 0;
   background: #ffd6ec; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
   color: #ff4fb3; font-size: 14px;
   border: 4px solid #ff9ed8;
+}
+
+/* imagem de teclas dentro do controls-box */
+.controls-box img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 14px;
+  flex-shrink: 0;
 }
 
 /* ── KEY BADGE ── */
@@ -179,7 +245,7 @@ p       { color: #555; line-height: 1.7; }
 }
 
 /* ── FEEDBACK ── */
-.stars-row { display: flex; gap: 8px; justify-content: center; margin: 12px 0; }
+.stars-row { display: flex; gap: 8px; justify-content: center; margin: 12px 0; flex-wrap: wrap; }
 .star-btn {
   background: none; border: none;
   font-size: 36px; cursor: pointer;
@@ -216,6 +282,7 @@ p       { color: #555; line-height: 1.7; }
   font-weight: 700; border-radius: 16px; cursor: pointer;
   box-shadow: 0 5px #c92c8e;
   transition: all 0.2s; margin-top: 10px;
+  width: 100%;
 }
 .btn-send:hover  { transform: translateY(-2px); box-shadow: 0 7px #c92c8e; }
 .btn-send:active { transform: translateY(2px);  box-shadow: 0 3px #c92c8e; }
@@ -243,20 +310,168 @@ p       { color: #555; line-height: 1.7; }
   border: 4px solid #ff9ed8;
   display: flex; align-items: center; justify-content: center;
   font-size: 44px;
+  overflow: hidden; /* garante que a imagem não vaze do círculo */
+}
+
+/* imagem dentro do avatar — corrige o overflow */
+.persona-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* ── FOOTER ── */
 footer {
   background: #ff7ac8; color: white;
-  padding: 22px; font-size: 14px;
+  padding: 22px 16px; font-size: 14px;
   position: relative; z-index: 1;
 }
 footer a { color: white; opacity: 0.8; }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .container { width: 94%; }
+}
+
 @media (max-width: 680px) {
-  .container    { width: 92%; }
+  nav { min-height: 70px; padding: 0 16px; }
+  .nav-logo img { height: 52px; }
   .controls-box { flex-direction: column; }
+  .controls-box img { max-width: 100%; }
   .controls-image { width: 100%; height: 100px; }
   .persona-card { flex-direction: column; align-items: center; }
+  .persona-avatar { width: 90px; height: 90px; }
+  .box { padding: 20px 16px; }
+  .mobile-menu { top: 70px; }
+  .btn-send { font-size: 15px; padding: 12px 24px; }
+}
+
+@media (max-width: 400px) {
+  .star-btn { font-size: 28px; }
+  .box h2 { font-size: 18px; }
+}
+/* ── HOME ── */
+.nav-logo-img {
+  height: 60px;
+  display: block;
+  margin: auto;
+}
+
+.barra-tema {
+  text-align: right;
+  padding: 8px 24px;
+  background: #ffc2e6;
+}
+
+.barra-tema button {
+  background: #ff4fb3;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.box-center { text-align: center; }
+
+.img-jogo {
+  width: 100%;
+  border-radius: 16px;
+  height: auto;
+  filter: blur(10px);
+}
+
+.texto-clique {
+  text-align: center;
+  margin-top: 16px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.tags-container { margin-top: 16px; }
+
+.input-nome {
+  padding: 10px 14px;
+  border: 2px solid #ff9ed8;
+  border-radius: 12px;
+  font-size: 15px;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.btn-entrar {
+  background: #ff4fb3;
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px #c92c8e;
+}
+
+.texto-saudacao {
+  margin-top: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ff4fb3;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.card-item {
+  background: #ffd6ec;
+  border-radius: 16px;
+  padding: 20px 12px;
+}
+
+.card-icone { font-size: 32px; }
+
+.card-texto {
+  margin: 8px 0 0;
+  font-weight: 600;
+  color: #ff4fb3;
+  font-size: 14px;
+}
+/* ── OBJETIVOS ── */
+.objetivos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.objetivo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffd6ec;
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+
+.objetivo-icone { font-size: 26px; }
+
+.objetivo-titulo {
+  margin: 0;
+  font-weight: 700;
+  color: #ff4fb3;
+}
+
+.objetivo-desc {
+  margin: 4px 0 0;
+  font-size: 13px;
 }

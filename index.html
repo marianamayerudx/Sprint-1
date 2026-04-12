@@ -1,94 +1,128 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pink Pixel Dreams</title>
+  <title>Pink Pixel Dreams
+  </title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- flores -->
-  <div class="flower" style="left:8%;  animation-duration:9s;  animation-delay:0s">🌸</div>
-  <div class="flower" style="left:22%; animation-duration:12s; animation-delay:2s">🌸</div>
-  <div class="flower" style="left:40%; animation-duration:10s; animation-delay:5s">🌸</div>
-  <div class="flower" style="left:60%; animation-duration:14s; animation-delay:1s">🌸</div>
-  <div class="flower" style="left:75%; animation-duration:11s; animation-delay:3s">🌸</div>
-  <div class="flower" style="left:90%; animation-duration:8s;  animation-delay:7s">🌸</div>
-
-  <!-- nav -->
   <nav>
-   <a class="nav-logo" href="index.html">
-  <img src="c:\Users\mioma\Downloads\luna vitória.png" style="height:90px; vertical-align:middle">
-</a>
+    <a class="nav-logo" href="index.html">
+      <img src="imgs/lunavitoria.png" alt="Logo">
+    </a>
 
-<div style="position:absolute; left:50%; transform:translateX(-50%); text-align:center">
-  <img src="c:\Users\mioma\Downloads\logojogo.png" style="height:80px; display:block; margin:auto">
-  <p style="color:white; font-size:20px; margin:10px;">Explore e colete itens em um pequeno mundo mágico de pixels!</p>
-</div>
+    <div class="nav-title">
+      <img src="imgs/logojogo.png" class="nav-logo-img">
+      <p class="nav-title-sub">Explore e colete itens em um pequeno mundo mágico de pixels!
+      </p>
+    </div>
+
     <ul class="nav-links">
-      <li><a href="index.html"    class="active">Home</a></li>
-      <li><a href="gameplay.html"          >Gameplay</a></li>
-      <li><a href="sobre.html"             >Sobre</a></li>
-      <li><a href="feedback.html"          >Feedback</a></li>
+      <li>
+        <a href="index.html" class="active">Home
+      </a>
+    </li>
+      <li>
+        <a href="gameplay.html">Gameplay
+        </a>
+      </li>
+      <li>
+        <a href="sobre.html">Sobre
+        </a>
+      </li>
+      <li>
+        <a href="feedback.html">Feedback
+        </a>
+      </li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- mobile menu -->
+  <div class="barra-tema">
+    <button id="btnTema" onclick="alterarTema()"> Tema Escuro
+    </button>
+  </div>
+
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"    class="active">🏠 Home</a>
-    <a href="gameplay.html"          > Gameplay</a>
-    <a href="sobre.html"             > Sobre</a>
-    <a href="feedback.html"          > Feedback</a>
+    <a href="index.html" class="active"> Home
+    </a>
+    <a href="gameplay.html"> Gameplay
+    </a>
+    <a href="sobre.html"> Sobre
+    </a>
+    <a href="feedback.html"> Feedback
+    </a>
   </div>
 
   <div class="container">
 
-    <div class="box" style="text-align:center">
-      <img src="c:\Users\mioma\Downloads\ilustraçaojogo.png" style="width:100%; border-radius:16px">
+    <div class="box box-center" id="caixa1">
+      <img id="imgJogo" src="imgs/ilustraçaojogo.png" class="img-jogo">
       <button class="play" onclick="window.location.href='gameplay.html'">▶ PLAY</button>
-      <p style="text-align:center; margin-top:16px; color:#aaa; font-size:13px">
-        Clique para ver como jogar!
+      <p class="texto-clique">Clique para ver como jogar!
       </p>
     </div>
 
-    <div class="box">
-      <h2> Bem-vinda ao Pink Pixel Dreams!</h2>
-      <p>
-        Um jogo de exploração e mágico onde cada pixel guarda um segredo.
-        Caminhe por um mundo colorido, busque fragmentos de sonhos e encare desafios ao coletar seus itens.
+    <div class="box" id="caixa2">
+      <h2>Bem-vinda ao Pink Pixel Dreams!
+      </h2>
+      <p id="descricaoJogo">
       </p>
-      <p>
-        Feito com muito carinho para quem ama aventuras tranquilas, estética fofa e aquela sensação quentinha de estar dentro de um sonho.
+      <p id="generoJogo">
       </p>
-      <div style="margin-top:16px">
-        <span class="tag"> Exploração</span>
-        <span class="tag"> Pixel Art</span>
-        <span class="tag"> Single-player</span>
+      <p id="plataformaJogo">
+      </p>
+      <p id="desenvolvedoraJogo">
+      </p>
+      <div class="tags-container">
+        <span class="tag">Exploração</span>
+        <span class="tag">Pixel Art</span>
+        <span class="tag">Single-player</span>
       </div>
     </div>
 
-    <div class="box" style="text-align:center">
-      <h2 style="text-align:center"> O que te espera em Pixel Play Dreams?</h2>
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:14px; margin-top:16px">
-        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
-          <div style="font-size:32px"></div>
-          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Um mundo colorido, secreto e imaginário</p>
+    <div class="box box-center" id="caixa3">
+      <h2>Qual é o seu nome? 
+      </h2>
+      <input type="text" id="inputNome" placeholder="Digite seu nome aqui..." class="input-nome">
+      <button onclick="saudar()" class="btn-entrar">Entrar </button>
+      <p id="saudacao" class="texto-saudacao">
+      </p>
+    </div>
+
+    <div class="box box-center" id="caixa4">
+      <h2>O que te espera em Pink Pixel Dreams?
+      </h2>
+      <div class="grid-cards">
+        <div class="card-item">
+          <div class="card-icone">
+          </div>
+          <p class="card-texto">Um mundo colorido, secreto e imaginário
+          </p>
         </div>
-        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
-          <div style="font-size:32px"></div>
-          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Itens colecionáveis</p>
+        <div class="card-item">
+          <div class="card-icone">
+          </div>
+          <p class="card-texto">Itens colecionáveis
+          </p>
         </div>
-        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
-          <div style="font-size:32px"></div>
-          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Personagens fofos</p>
+        <div class="card-item">
+          <div class="card-icone">
+          </div>
+          <p class="card-texto">Personagens fofos
+          </p>
         </div>
-        <div style="background:#ffd6ec; border-radius:16px; padding:20px 12px">
-          <div style="font-size:32px"></div>
-          <p style="margin:8px 0 0; font-weight:600; color:#ff4fb3; font-size:14px">Trilha sonora dreamy</p>
+        <div class="card-item">
+          <div class="card-icone">
+          </div>
+          <p class="card-texto">Trilha sonora dreamy
+          </p>
         </div>
       </div>
     </div>
@@ -96,9 +130,144 @@
   </div>
 
   <footer>
-     Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx <3
+    Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx ❤
   </footer>
 
   <script src="nav.js"></script>
+  <script>
+
+    // variáveis com informações do jogo
+    var nomeJogo = "Pink Pixel Dreams"
+    var descricao = "Um jogo de exploração fofo onde cada pixel guarda um segredo. Caminhe por um mundo colorido, busque fragmentos de sonhos e encare desafios ao coletar seus itens."
+    var genero = " Gênero: Exploração / Cozy Game / Pixel Art"
+    var plataforma = " Plataforma: PC"
+    var desenvolvedora = " Desenvolvido por: Mariana Mayer"
+
+    // injeta as variáveis no HTML
+    document.getElementById("descricaoJogo").innerHTML = descricao
+    document.getElementById("generoJogo").innerHTML = genero
+    document.getElementById("plataformaJogo").innerHTML = plataforma
+    document.getElementById("desenvolvedoraJogo").innerHTML = desenvolvedora
+
+    // verifica o ano de lançamento
+    const anoLancamento = 2026
+    var anoAtual = new Date().getFullYear()
+
+    if (anoAtual === anoLancamento) {
+      alert("Grande Lançamento! Pink Pixel Dreams chegou esse ano!")
+    }
+
+    // pede a idade ao carregar a página
+    var idade = prompt("Olá! Quantos anos você tem?")
+
+    if (idade >= 10) {
+      alert("Acesso liberado! Bem-vinda ao Pink Pixel Dreams! ")
+      document.getElementById("imgJogo").style.filter = "blur(0px)"
+    } else {
+      alert("Acesso negado! Este jogo é para maiores de 10 anos. ")
+    }
+
+    // saudação personalizada pelo nome
+    function saudar() {
+      var nome = document.getElementById("inputNome").value
+      document.getElementById("saudacao").innerHTML = "Olá, " + nome + "! Seja bem-vinda ao Pink Pixel Dreams! 🌸"
+    }
+
+    // aplica o tema salvo caso já tenha sido escolhido antes
+    var temaEscuro = false
+
+    if (localStorage.getItem("tema") === "escuro") {
+      temaEscuro = true
+      document.body.style.background = "linear-gradient(160deg, #2d1b4e, #1a0a2e)"
+      document.body.style.color = "white"
+      document.querySelector("nav").style.background = "#1a0a2e"
+      document.querySelector(".barra-tema").style.background = "#2d1b4e"
+      document.getElementById("caixa1").style.background = "#3b2060"
+      document.getElementById("caixa2").style.background = "#3b2060"
+      document.getElementById("caixa3").style.background = "#3b2060"
+      document.getElementById("caixa4").style.background = "#3b2060"
+      document.getElementById("caixa1").style.color = "white"
+      document.getElementById("caixa2").style.color = "white"
+      document.getElementById("caixa3").style.color = "white"
+      document.getElementById("caixa4").style.color = "white"
+      document.getElementById("btnTema").innerHTML = "Tema Claro"
+
+      var paragrafos = document.getElementsByTagName("p")
+      var i = 0
+      while (i < paragrafos.length) {
+        paragrafos[i].style.color = "white"
+        i = i + 1
+      }
+    }
+
+    // botão de tema claro/escuro
+    function alterarTema() {
+      var btn = document.getElementById("btnTema")
+      var caixa1 = document.getElementById("caixa1")
+      var caixa2 = document.getElementById("caixa2")
+      var caixa3 = document.getElementById("caixa3")
+      var caixa4 = document.getElementById("caixa4")
+
+      temaEscuro = !temaEscuro
+
+      if (temaEscuro) {
+        document.body.style.background = "linear-gradient(160deg, #2d1b4e, #1a0a2e)"
+        document.body.style.color = "white"
+        document.querySelector("nav").style.background = "#1a0a2e"
+        document.querySelector(".barra-tema").style.background = "#2d1b4e"
+        caixa1.style.background = "#3b2060"
+        caixa2.style.background = "#3b2060"
+        caixa3.style.background = "#3b2060"
+        caixa4.style.background = "#3b2060"
+        caixa1.style.color = "white"
+        caixa2.style.color = "white"
+        caixa3.style.color = "white"
+        caixa4.style.color = "white"
+        btn.innerHTML = "Tema Claro"
+        localStorage.setItem("tema", "escuro")
+
+        var paragrafos = document.getElementsByTagName("p")
+        var i = 0
+        while (i < paragrafos.length) {
+          paragrafos[i].style.color = "white"
+          i = i + 1
+        }
+
+      } else {
+        document.body.style.background = ""
+        document.body.style.color = ""
+        document.querySelector("nav").style.background = ""
+        document.querySelector(".barra-tema").style.background = ""
+        caixa1.style.background = ""
+        caixa2.style.background = ""
+        caixa3.style.background = ""
+        caixa4.style.background = ""
+        caixa1.style.color = ""
+        caixa2.style.color = ""
+        caixa3.style.color = ""
+        caixa4.style.color = ""
+        btn.innerHTML = " Tema Escuro"
+        localStorage.setItem("tema", "claro")
+
+        var paragrafos = document.getElementsByTagName("p")
+        var i = 0
+        while (i < paragrafos.length) {
+          paragrafos[i].style.color = ""
+          i = i + 1
+        }
+      }
+    }
+
+  </script>
+  <h1>
+    Pink Pixel Dreams
+  </h1>
+  <iframe width="100%" height="600" src="jogo/index.html"></iframe>
+  <p>
+    <a href="jogo/index.html" target="_blank">
+      Abrir o jogo em nova aba
+    </a>
+  </p>
 </body>
 </html>
+

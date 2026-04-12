@@ -3,49 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gameplay · Pink Pixel Dreams</title>
+  <title>Gameplay · Pink Pixel Dreams
+  </title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="flower" style="left:5%;  animation-duration:11s; animation-delay:0s">🌸</div>
-  <div class="flower" style="left:35%; animation-duration:9s;  animation-delay:4s">🌸</div>
-  <div class="flower" style="left:65%; animation-duration:13s; animation-delay:1s">🌸</div>
-  <div class="flower" style="left:88%; animation-duration:10s; animation-delay:6s">🌸</div>
-
   <nav>
-   <a class="nav-logo" href="index.html">
-  <img src="c:\Users\mioma\Downloads\luna vitória.png" style="height:90px; vertical-align:middle">
-</a>
+    <a class="nav-logo" href="index.html">
+      <img src="imgs/lunavitoria.png" alt="Logo">
+    </a>
 
-<div style="position:absolute; left:50%; transform:translateX(-50%); text-align:center">
-  <p style="color:white; font-size:40px; font-weight:700; margin:0"> Gameplay</p>
-  <p style="color:white; font-size:20px; margin:5px 0 0">Tudo que você precisa saber para começar a jogar</p>
-</div>
+    <div class="nav-title">
+      <p class="nav-title-main">Gameplay
+      </p>
+      <p class="nav-title-sub">Tudo que você precisa saber para começar a jogar
+      </p>
+    </div>
+
     <ul class="nav-links">
-      <li><a href="index.html"             >Home</a></li>
-      <li><a href="gameplay.html" class="active">Gameplay</a></li>
-      <li><a href="sobre.html"             >Sobre</a></li>
-      <li><a href="feedback.html"          >Feedback</a></li>
+      <li>
+        <a href="index.html">Home
+        </a>
+      </li>
+      <li>
+        <a href="gameplay.html" class="active">Gameplay
+        </a>
+      </li>
+      <li>
+        <a href="sobre.html">Sobre
+        </a>
+      </li>
+      <li>
+        <a href="feedback.html">Feedback
+        </a>
+      </li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"             >🏠 Home</a>
-    <a href="gameplay.html" class="active">🎮 Gameplay</a>
-    <a href="sobre.html"             >🌷 Sobre</a>
-    <a href="feedback.html"          >💌 Feedback</a>
+  <div class="page-title-mobile">
+    <p class="ptm-main">Gameplay
+    </p>
+    <p class="ptm-sub">Tudo que você precisa saber para começar a jogar
+    </p>
   </div>
 
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"> Home
+    </a>
+    <a href="gameplay.html" class="active"> Gameplay
+    </a>
+    <a href="sobre.html"> Sobre
+    </a>
+    <a href="feedback.html"> Feedback
+    </a>
+  </div>
 
   <div class="container">
 
-    <!-- Como jogar -->
-    <div class="box">
-      <h2> Como Jogar:</h2>
+    <div class="box" id="caixa1">
+      <h2>Como Jogar:
+      </h2>
       <p>
         Ao iniciar o jogo você é colocada em um mundo colorido e repleto de itens.
         Explore cada cantinho, destrua as slimes e colete morangos e fragmentos de
@@ -57,10 +78,10 @@
       </p>
     </div>
 
-    <!-- Controles -->
-    <div class="box controls-box">
+    <div class="box controls-box" id="caixa2">
       <div class="controls-text">
-        <h2>🕹️ Controles</h2>
+        <h2> Controles
+        </h2>
         <p>
           <span class="key">W</span>
           <span class="key">A</span>
@@ -73,45 +94,49 @@
           <span class="key">→</span>
           &nbsp; Mover
         </p>
-        <p><span class="key">E</span> &nbsp; Interagir / Conversar</p>
-        <p><span class="key">ESC</span> &nbsp; Abrir menu / Pausar</p>
-        <p><span class="key">F</span> &nbsp; Coletar item</p>
-        <p><span class="key">Enter</span> &nbsp; Confirmar</p>
+        <p><span class="key">E</span> &nbsp; Interagir / Conversar
+        </p>
+        <p><span class="key">ESC</span> &nbsp; Abrir menu / Pausar
+        </p>
+        <p><span class="key">F</span> &nbsp; Coletar item
+        </p>
+        <p><span class="key">Enter</span> &nbsp; Confirmar
+        </p>
       </div>
-      <img src="c:\Users\mioma\Downloads\teclas.png" style="width:50%; border-radius:14px">
+      <img src="imgs/teclas.png" alt="Imagem das teclas">
     </div>
 
-    <!-- Dicas -->
-    <div class="box">
-      <h2> Dicas</h2>
-      <p> Explore todos os cantos — alguns itens ficam bem escondidos!</p>
-      <p> Colete os fragmentos para descobrir novas áreas do mapa.</p>
-      <p> Ative a trilha sonora completa para a experiência mais imersiva!</p>
+    <div class="box" id="caixa3">
+      <h2>Dicas
+      </h2>
+      <p>Explore todos os cantos — alguns itens ficam bem escondidos!</p>
+      <p>Colete os fragmentos para descobrir novas áreas do mapa.</p>
+      <p>Ative a trilha sonora completa para a experiência mais imersiva!</p>
     </div>
 
-    <!-- Objetivos do jogo -->
-    <div class="box">
-      <h2> Objetivos do jogo</h2>
-      <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px">
-        <div style="display:flex; align-items:center; gap:14px; background:#ffd6ec; border-radius:14px; padding:14px 18px">
-          <span style="font-size:26px"></span>
+    <div class="box" id="caixa4">
+      <h2>Objetivos do jogo
+      </h2>
+      <div class="objetivos">
+        <div class="objetivo-item">
+          <span class="objetivo-icone"></span>
           <div>
-            <p style="margin:0; font-weight:700; color:#ff4fb3">Coletar todos os fragmentos</p>
-            <p style="margin:4px 0 0; font-size:13px">Encontre os 20 fragmentos de sonho espalhados pelo mundo</p>
+            <p class="objetivo-titulo">Coletar todos os fragmentos</p>
+            <p class="objetivo-desc">Encontre os 20 fragmentos de sonho espalhados pelo mundo</p>
           </div>
         </div>
-        <div style="display:flex; align-items:center; gap:14px; background:#ffd6ec; border-radius:14px; padding:14px 18px">
-          <span style="font-size:26px"></span>
+        <div class="objetivo-item">
+          <span class="objetivo-icone"></span>
           <div>
-            <p style="margin:0; font-weight:700; color:#ff4fb3">Desbloquear todas as áreas</p>
-            <p style="margin:4px 0 0; font-size:13px">Explore todas as áreas e desafios do jogo</p>
+            <p class="objetivo-titulo">Desbloquear todas as áreas</p>
+            <p class="objetivo-desc">Explore todas as áreas e desafios do jogo</p>
           </div>
         </div>
-        <div style="display:flex; align-items:center; gap:14px; background:#ffd6ec; border-radius:14px; padding:14px 18px">
-          <span style="font-size:26px"></span>
+        <div class="objetivo-item">
+          <span class="objetivo-icone"></span>
           <div>
-            <p style="margin:0; font-weight:700; color:#ff4fb3">Completar as histórias</p>
-            <p style="margin:4px 0 0; font-size:13px">Interaja com a personagem e descubra seus sonhos</p>
+            <p class="objetivo-titulo">Completar as histórias</p>
+            <p class="objetivo-desc">Interaja com a personagem e descubra seus sonhos</p>
           </div>
         </div>
       </div>
@@ -120,9 +145,31 @@
   </div>
 
   <footer>
-     Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx <3
+    Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx ❤
   </footer>
 
   <script src="nav.js"></script>
+  <script>
+    if (localStorage.getItem("tema") === "escuro") {
+      document.body.style.background = "linear-gradient(160deg, #2d1b4e, #1a0a2e)"
+      document.body.style.color = "white"
+      document.querySelector("nav").style.background = "#1a0a2e"
+      document.getElementById("caixa1").style.background = "#3b2060"
+      document.getElementById("caixa2").style.background = "#3b2060"
+      document.getElementById("caixa3").style.background = "#3b2060"
+      document.getElementById("caixa4").style.background = "#3b2060"
+      document.getElementById("caixa1").style.color = "white"
+      document.getElementById("caixa2").style.color = "white"
+      document.getElementById("caixa3").style.color = "white"
+      document.getElementById("caixa4").style.color = "white"
+
+      var paragrafos = document.getElementsByTagName("p")
+      var i = 0
+      while (i < paragrafos.length) {
+        paragrafos[i].style.color = "white"
+        i = i + 1
+      }
+    }
+  </script>
 </body>
 </html>

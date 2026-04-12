@@ -3,49 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback · Pink Pixel Dreams</title>
+  <title>Feedback · Pink Pixel Dreams
+  </title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="flower" style="left:15%; animation-duration:12s; animation-delay:0s">🌸</div>
-  <div class="flower" style="left:50%; animation-duration:10s; animation-delay:4s">🌸</div>
-  <div class="flower" style="left:82%; animation-duration:14s; animation-delay:2s">🌸</div>
-
   <nav>
     <a class="nav-logo" href="index.html">
-  <img src="c:\Users\mioma\Downloads\luna vitória.png" style="height:90px; vertical-align:middle">
-</a>
-<div style="position:absolute; left:50%; transform:translateX(-50%); text-align:center">
-  <p style="color:white; font-size:40px; font-weight:700; margin:0"> Feedback</p>
-  <p style="color:white; font-size:20px; margin:5px 0 0">Sua opinião é muito importante para mim!</p>
-</div>
+      <img src="imgs/lunavitoria.png" alt="Logo">
+    </a>
+
+    <div class="nav-title">
+      <p class="nav-title-main">Feedback
+      </p>
+      <p class="nav-title-sub">Sua opinião é muito importante para mim!
+      </p>
+    </div>
+
     <ul class="nav-links">
-      <li><a href="index.html"               >Home</a></li>
-      <li><a href="gameplay.html"            >Gameplay</a></li>
-      <li><a href="sobre.html"               >Sobre</a></li>
-      <li><a href="feedback.html" class="active">Feedback</a></li>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="gameplay.html">Gameplay
+        </a>
+      </li>
+      <li>
+        <a href="sobre.html">Sobre
+        </a>
+      </li>
+      <li>
+        <a href="feedback.html" class="active">Feedback
+        </a>
+      </li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"               >🏠 Home</a>
-    <a href="gameplay.html"            >🎮 Gameplay</a>
-    <a href="sobre.html"               >🌷 Sobre</a>
-    <a href="feedback.html" class="active">💌 Feedback</a>
+  <div class="page-title-mobile">
+    <p class="ptm-main">Feedback
+    </p>
+    <p class="ptm-sub">Sua opinião é muito importante para mim!
+    </p>
   </div>
 
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"> Home
+    </a>
+    <a href="gameplay.html"> Gameplay
+    </a>
+    <a href="sobre.html"> Sobre
+    </a>
+    <a href="feedback.html" class="active"> Feedback
+    </a>
+  </div>
 
 
   <div class="container">
 
-    <div class="box" id="formBox">
-      <h2 style="text-align:center"> O que você achou do jogo?</h2>
+    <div class="box" id="caixa1">
+      <h2 style="text-align:center">O que você achou do jogo?
+      </h2>
 
-      <!-- estrelas -->
+
       <div class="stars-row" id="starsRow" aria-label="Avaliação">
         <button class="star-btn" data-val="1" aria-label="1 estrela">⭐</button>
         <button class="star-btn" data-val="2" aria-label="2 estrelas">⭐</button>
@@ -55,39 +78,48 @@
       </div>
       <p id="starLabel" style="text-align:center; color:#ff9ed8; font-size:15px; min-height:22px; margin:0 0 20px"></p>
 
-      <!-- formulário -->
       <div class="feedback-form">
-        <label for="nome">Seu nome (opcional)</label>
-        <input type="text" id="nome" placeholder="Como posso te chamar? " autocomplete="off">
+        <label for="nome">Seu nome (opcional)
+        </label>
+        <input type="text" id="nome" placeholder="Como posso te chamar?" autocomplete="off">
 
-        <label for="comentario">Comentário</label>
+        <label for="comentario">Comentário
+        </label>
         <textarea id="comentario" placeholder="Conta o que você gostou, o que pode melhorar, ou só manda um oi!!"></textarea>
 
-        <button class="btn-send" onclick="enviarFeedback()">Enviar 💌</button>
+        <button
+           class="btn-send" onclick="enviarFeedback()">Enviar 
+        </button>
       </div>
     </div>
 
-    <!-- mensagem de sucesso -->
-    <div class="box success-msg" id="successBox">
-      <div style="font-size:50px; margin-bottom:10px">🌸</div>
-      <p style="font-size:22px; font-weight:700; color:#ff4fb3; margin:0 0 8px">Obrigada pelo feedback!</p>
-      <p style="color:#888">Sua opinião me ajuda muito a melhorar o jogo. 💕</p>
-      <button class="btn-send" style="margin-top:10px" onclick="voltarForm()">Enviar outro feedback</button>
+    <div class="box success-msg" id="caixa2">
+      <div
+       style="font-size:50px; margin-bottom:10px">
+      </div>
+      <p style="font-size:22px; font-weight:700; color:#ff4fb3; margin:0 0 8px">Obrigada pelo feedback!
+      </p>
+      <p style="color:#888">Sua opinião me ajuda muito a melhorar o jogo!!
+      </p>
+      <button class="btn-send" style="margin-top:10px" onclick="voltarForm()">Enviar outro feedback
+      </button>
     </div>
 
-    <!-- feedbacks enviados (demo local) -->
-    <div class="box" id="listaBox" style="display:none">
-      <h2>💬 Feedbacks recentes</h2>
-      <div id="listaFeedbacks" style="display:flex; flex-direction:column; gap:12px; margin-top:8px"></div>
+    <div class="box" id="caixa3" style="display:none">
+      <h2>💬 Feedbacks recentes
+      </h2>
+      <div id="listaFeedbacks" style="display:flex; flex-direction:column; gap:12px; margin-top:8px">
+      </div>
     </div>
 
   </div>
 
   <footer>
-     Pink Pixel Dreams &nbsp;·&nbsp; feito com amor poe @mayerudx
+    Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx ❤
   </footer>
 
-  <script src="nav.js"></script>
+  <script src="nav.js">
+  </script>
   <script>
     const labels = ['', ' Não gostei muito...', ' Pode melhorar', ' Gostei!', ' Adorei!', ' Amei demais!'];
     let notaSelecionada = 0;
@@ -126,8 +158,8 @@
     });
 
     function enviarFeedback() {
-      const nome      = document.getElementById('nome').value.trim();
-      const comentario= document.getElementById('comentario').value.trim();
+      const nome       = document.getElementById('nome').value.trim();
+      const comentario = document.getElementById('comentario').value.trim();
 
       if (!notaSelecionada) {
         starLbl.textContent = '⚠️ Escolha uma nota antes de enviar!';
@@ -141,16 +173,16 @@
 
       feedbacks.unshift({ nome: nome || 'Anônimo 🌸', nota: notaSelecionada, comentario });
 
-      document.getElementById('formBox').style.display    = 'none';
-      document.getElementById('successBox').style.display = 'block';
+      document.getElementById('caixa1').style.display = 'none';
+      document.getElementById('caixa2').style.display = 'block';
       renderFeedbacks();
     }
 
     function voltarForm() {
-      document.getElementById('formBox').style.display    = 'block';
-      document.getElementById('successBox').style.display = 'none';
-      document.getElementById('nome').value        = '';
-      document.getElementById('comentario').value  = '';
+      document.getElementById('caixa1').style.display = 'block';
+      document.getElementById('caixa2').style.display = 'none';
+      document.getElementById('nome').value       = '';
+      document.getElementById('comentario').value = '';
       notaSelecionada = 0;
       pintarEstrel(0);
       starLbl.textContent = '';
@@ -160,17 +192,36 @@
     function renderFeedbacks() {
       if (!feedbacks.length) return;
       const lista = document.getElementById('listaFeedbacks');
-      const box   = document.getElementById('listaBox');
+      const box   = document.getElementById('caixa3');
       box.style.display = 'block';
       lista.innerHTML = feedbacks.map(f => `
         <div style="background:#ffd6ec; border-radius:14px; padding:14px 16px">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:4px">
             <span style="font-weight:700; color:#ff4fb3">${f.nome}</span>
             <span style="font-size:18px">${'⭐'.repeat(f.nota)}</span>
           </div>
           <p style="margin:0; font-size:14px; color:#555">${f.comentario}</p>
         </div>
       `).join('');
+    }
+  </script>
+
+  <script>
+    if (localStorage.getItem("tema") === "escuro") {
+      document.body.style.background = "linear-gradient(160deg, #2d1b4e, #1a0a2e)"
+      document.body.style.color = "white"
+      document.querySelector("nav").style.background = "#1a0a2e"
+      document.getElementById("caixa1").style.background = "#3b2060"
+      document.getElementById("caixa2").style.background = "#3b2060"
+      document.getElementById("caixa1").style.color = "white"
+      document.getElementById("caixa2").style.color = "white"
+
+      var paragrafos = document.getElementsByTagName("p")
+      var i = 0
+      while (i < paragrafos.length) {
+        paragrafos[i].style.color = "white"
+        i = i + 1
+      }
     }
   </script>
 </body>
