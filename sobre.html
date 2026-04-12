@@ -100,6 +100,19 @@
      Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx <3
   </footer>
 
-  <script src="nav.js"></script>
+  <script src="nav.js">
+  </script>
+<script>
+  window.onload = function() {
+    var idade = prompt("Olá! Quantos anos você tem?");
+    if (idade !== null) {
+      if (idade >= 10) {
+        alert("Bem-vinda ao Pink Pixel Dreams! ");
+      } else {
+        alert("Que fofinho! Este jogo é para maiores de 10 anos. Peça ajuda a um adulto! ");
+      }
+    }
+  };
+</script>
 </body>
 </html>
