@@ -121,7 +121,8 @@
   <script src="nav.js">
   </script>
   <script>
-    const labels = ['', ' Não gostei muito...', ' Pode melhorar', ' Gostei!', ' Adorei!', ' Amei demais!'];
+
+  
     let notaSelecionada = 0;
     const feedbacks = [];
 
@@ -171,7 +172,7 @@
         return;
       }
 
-      feedbacks.unshift({ nome: nome || 'Anônimo 🌸', nota: notaSelecionada, comentario });
+      feedbacks.unshift({ nome: nome || 'Anônimo ', nota: notaSelecionada, comentario });
 
       document.getElementById('caixa1').style.display = 'none';
       document.getElementById('caixa2').style.display = 'block';

@@ -130,26 +130,26 @@
   </div>
 
   <footer>
-    Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx ❤
+    Pink Pixel Dreams &nbsp;·&nbsp; feito com amor por @mayerudx 
   </footer>
 
   <script src="nav.js"></script>
   <script>
 
-    // variáveis com informações do jogo
-    var nomeJogo = "Pink Pixel Dreams"
-    var descricao = "Um jogo de exploração fofo onde cada pixel guarda um segredo. Caminhe por um mundo colorido, busque fragmentos de sonhos e encare desafios ao coletar seus itens."
-    var genero = " Gênero: Exploração / Cozy Game / Pixel Art"
-    var plataforma = " Plataforma: PC"
-    var desenvolvedora = " Desenvolvido por: Mariana Mayer"
+  
+    const nomeJogo = "Pink Pixel Dreams"
+    const descricao = "Um jogo de exploração fofo onde cada pixel guarda um segredo. Caminhe por um mundo colorido, busque fragmentos de sonhos e encare desafios ao coletar seus itens."
+    const genero = " Gênero: Exploração / Cozy Game / Pixel Art"
+    const plataforma = " Plataforma: PC"
+    const desenvolvedora = " Desenvolvido por: Mariana Mayer"
 
-    // injeta as variáveis no HTML
+
     document.getElementById("descricaoJogo").innerHTML = descricao
     document.getElementById("generoJogo").innerHTML = genero
     document.getElementById("plataformaJogo").innerHTML = plataforma
     document.getElementById("desenvolvedoraJogo").innerHTML = desenvolvedora
 
-    // verifica o ano de lançamento
+    
     const anoLancamento = 2026
     var anoAtual = new Date().getFullYear()
 
@@ -157,7 +157,7 @@
       alert("Grande Lançamento! Pink Pixel Dreams chegou esse ano!")
     }
 
-    // pede a idade ao carregar a página
+    
     var idade = prompt("Olá! Quantos anos você tem?")
 
     if (idade >= 10) {
@@ -167,13 +167,13 @@
       alert("Acesso negado! Este jogo é para maiores de 10 anos. ")
     }
 
-    // saudação personalizada pelo nome
+    
     function saudar() {
       var nome = document.getElementById("inputNome").value
       document.getElementById("saudacao").innerHTML = "Olá, " + nome + "! Seja bem-vinda ao Pink Pixel Dreams! 🌸"
     }
 
-    // aplica o tema salvo caso já tenha sido escolhido antes
+    
     var temaEscuro = false
 
     if (localStorage.getItem("tema") === "escuro") {
@@ -192,21 +192,21 @@
       document.getElementById("caixa4").style.color = "white"
       document.getElementById("btnTema").innerHTML = "Tema Claro"
 
-      var paragrafos = document.getElementsByTagName("p")
-      var i = 0
+      const paragrafos = document.getElementsByTagName("p")
+      const i = 0
       while (i < paragrafos.length) {
         paragrafos[i].style.color = "white"
         i = i + 1
       }
     }
 
-    // botão de tema claro/escuro
+    
     function alterarTema() {
-      var btn = document.getElementById("btnTema")
-      var caixa1 = document.getElementById("caixa1")
-      var caixa2 = document.getElementById("caixa2")
-      var caixa3 = document.getElementById("caixa3")
-      var caixa4 = document.getElementById("caixa4")
+      const btn = document.getElementById("btnTema")
+      const caixa1 = document.getElementById("caixa1")
+      const caixa2 = document.getElementById("caixa2")
+      const caixa3 = document.getElementById("caixa3")
+      const caixa4 = document.getElementById("caixa4")
 
       temaEscuro = !temaEscuro
 
@@ -259,15 +259,17 @@
     }
 
   </script>
-  <h1>
-    Pink Pixel Dreams
-  </h1>
-  <iframe width="100%" height="600" src="jogo/index.html"></iframe>
-  <p>
-    <a href="jogo/index.html" target="_blank">
-      Abrir o jogo em nova aba
-    </a>
-  </p>
+
+  <div class="container">
+    <div class="box box-center">
+      <h2> Jogar agora</h2>
+      <iframe width="100%" height="600" src="jogo/index.html" style="border:none; border-radius:16px"></iframe>
+      <p><a href="jogo/index.html" target="_blank">Abrir o jogo em nova aba</a></p>
+    </div>
+  </div>
+
+  </body>
+</html>
 </body>
 </html>
 
